@@ -39,7 +39,7 @@ jobs:
           skipIfReleaseExists: true
           tag: "latest"
           artifacts: "release.tar.gz,foo/*.txt"
-          bodyFile: "readme.md"
+          bodyFile: "README.md"
 
       - name: Install Railway
         run: npm i -g @railway/cli
