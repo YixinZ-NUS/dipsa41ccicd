@@ -16,12 +16,10 @@ jobs:
       contents: write
     steps:
       - name: Check commit message
-        shell: bash
+        if: startsWith(github.event.head_commit.message, '#NORUN')
         run: |
-          if: ${{ startsWith(github.event.head_commit.message, '#NORUN') }}; then
-            echo "Commit message starts with #NORUN, exiting workflow."
-            exit 0
-          fi
+          echo "Commit message starts with #NORUN, exiting workflow."
+          exit 0
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Create tag
