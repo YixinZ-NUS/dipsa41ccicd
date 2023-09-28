@@ -17,14 +17,14 @@ jobs:
     steps:
       - name: Check branch name
         run: |
-          if [[ ${{ github.ref }} != refs/heads/v* ]]; then
+          if: [[ ${{ github.ref }} != refs/heads/v* ]]; then
             echo "Branch name does not match the pattern, exiting workflow."
             exit 0
           fi
       - name: Check commit message
         shell: bash
         run: |
-          if [[ ${{ github.event.head_commit.message }} == *#NORUN* ]]; then
+          if: ${{ startsWith(github.event.head_commit.message, '#NORUN') }}; then
           echo "Commit message starts with #NORUN, exiting workflow."
           exit 0
           fi
