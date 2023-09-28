@@ -52,8 +52,18 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Hello World!"
+                    "text": "*Name*:Zhang Yixin  \t*Matriculation*: A0286191X \n*Email*: yixin.zhang@u.nus.edu \t*Repository* <https://github.com/YixinZ-NUS/dipsa41ccicd/> "
                   }
+                },
+                {
+                  "type": "section",
+                  "block_id": "Railway",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Deployment* \n<https://dipsa41ccicd-production-8191.up.railway.app> \n<https://dipsa41ccicd-production-8191.up.railway.app|Open application>"
+                    }
+                  ]
                 }
               ]
             }
