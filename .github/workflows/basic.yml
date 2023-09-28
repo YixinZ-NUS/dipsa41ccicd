@@ -27,11 +27,6 @@ jobs:
           tag: "latest"
           force_push_tag: true
           message: "Latest release"
-  release:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
