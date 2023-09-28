@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Check commit message
         run: |
-          if [[ $(git log -1 --pretty=%B) == *"#NORUN"* ]]; then
-            echo "Commit message contains #NORUN, exiting workflow."
+          if [[ $(git log -1 --pretty=%B) == *#NORUN* ]]; then
+            echo "Commit message starts with #NORUN, exiting workflow."
             exit 0
           fi
       - name: Checkout code
