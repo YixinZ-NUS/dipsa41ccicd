@@ -52,7 +52,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "*Name*:Zhang Yixin  \t*Matriculation*: A0286191X \n*Email*: yixin.zhang@u.nus.edu \t*Repository* <https://github.com/YixinZ-NUS/dipsa41ccicd/> "
+                    "text": "*Name*:Zhang Yixin  \t*Matriculation*: A0286191X \n*Email*: yixin.zhang@u.nus.edu \n*Repository* <https://github.com/YixinZ-NUS/dipsa41ccicd/> "
                   }
                 },
                 {
@@ -61,7 +61,7 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Deployment* \n<https://dipsa41ccicd-production-8191.up.railway.app> \n<https://dipsa41ccicd-production-8191.up.railway.app|Open application>"
+                      "text": "*Deployment*:<https://dipsa41ccicd-production-8191.up.railway.app> \n<https://dipsa41ccicd-production-8191.up.railway.app|Open application>"
                     }
                   ]
                 }
