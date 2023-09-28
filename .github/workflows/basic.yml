@@ -1,0 +1,28 @@
+name: CI
+
+on:
+
+  push: 
+    branches:
+      - 'v[0-9]+.[0-9]+'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check commit message
+        run: |
+          if [[ $(git log -1 --pretty=%B) == *"#NORUN"* ]]; then
+            echo "Commit message contains #NORUN, exiting workflow."
+            exit 0
+          fi
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Build and test
+        run: |
+          # Your build and test commands here
+  release:
+    needs: build
+    runs-on: ubuntu-latest
