@@ -16,6 +16,7 @@ jobs:
       contents: write
     steps:
       - name: Check commit message
+        shell: bash
         run: |
           if [[ $(git log -1 --pretty=%B) == *#NORUN* ]]; then
           echo "Commit message starts with #NORUN, exiting workflow."
