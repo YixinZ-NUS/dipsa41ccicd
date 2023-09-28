@@ -53,18 +53,18 @@ jobs:
         uses: slackapi/slack-github-action@v1.24.0
         with:
           payload: |
-              {
-                "text": "DipSA41C CI/CD Assignment Submission",
-                "blocks": [
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "Hello World!"
-                    }
-                  },
-                ]
-              }
+            {
+              "text": "DipSA41C CI/CD Assignment Submission",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Hello World!"
+                  }
+                }
+              ]
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
