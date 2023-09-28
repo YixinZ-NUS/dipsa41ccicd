@@ -17,9 +17,7 @@ jobs:
     steps:
       - name: Check commit message
         if: startsWith(github.event.head_commit.message, '#NORUN')
-        run: |
-          echo "Commit message starts with #NORUN, exiting workflow."
-          exit 0
+        uses: styfle/cancel-workflow-action@0.9.1
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Create tag
