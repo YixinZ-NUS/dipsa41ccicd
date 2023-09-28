@@ -18,7 +18,13 @@ jobs:
       - name: Check commit message
         run: |
           if [[ $(git log -1 --pretty=%B) == *#NORUN* ]]; then
-            echo "Commit message starts with #NORUN, exiting workflow."
+          echo "Commit message starts with #NORUN, exiting workflow."
+          exit 0
+          fi
+      - name: Check branch name
+        run: |
+          if [[ ${{ github.ref }} != refs/heads/v* ]]; then
+            echo "Branch name does not match the pattern, exiting workflow."
             exit 0
           fi
       - name: Checkout code
