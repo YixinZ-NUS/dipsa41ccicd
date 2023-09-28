@@ -21,6 +21,3 @@ jobs:
           fi
       - name: Checkout code
         uses: actions/checkout@v4
-  release:
-    needs: build
-    runs-on: ubuntu-latest
